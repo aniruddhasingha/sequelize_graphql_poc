@@ -1,0 +1,30 @@
+{
+  "name": "relational_graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/merge": "^6.2.5",
+    "apollo-server-express": "^1.4.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0",
+    "graphql-tools": "^7.0.1",
+    "merge-graphql-schemas": "^1.7.8",
+    "sequelize": "^4.44.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.7",
+    "@babel/core": "^7.12.7",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-stage-3": "^7.8.3",
+    "nodemon": "^2.0.6"
+  }
+}
