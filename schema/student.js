@@ -4,7 +4,7 @@ type Student {
     firstName: String!
     lastName: String!
     email: String!
-    hobbies: [Hobbies!]!
+    Hobbies: [Hobbies!]!
  }
  type Hobbies {
     id: Int!

@@ -1,7 +1,15 @@
+import student from "../schema/student"
+
 export default{
     Query: {
         async getStudent (parent, { id }, { models },info) {
-         return models.Student.findByPk(id)
+         return models.Student.findOne({where:{id:id},
+        include:[{
+          model:models.Hobbies,
+          where:{StudentId:id},
+          as:'Hobbies'
+        }]
+        })
        },
         async getAllStudents (root, args, { models }){
          return models.Student.findAll()
@@ -17,9 +25,4 @@ Mutation: {
     })
   },
 },
-Hobbies: {
-    async student(student) {
-     return student.getStudent()
-   }
- }
 }
